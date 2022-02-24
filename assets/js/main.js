@@ -259,10 +259,11 @@ console.log(datosModificadosRadiologia);
 // ------------------------------------- separando por un guión cada dato desplegado y cada fila de información debe estar
 // ------------------------------------- separada por un párrafo.
 
+let informacionDental = document.querySelector("#informacionDental");
+
 dental.forEach(datosDentales => {
-    const para = document.createElement("p");
-    para.innerText = `${datosDentales.hora} - ${datosDentales.especialista} - ${datosDentales.paciente} - ${datosDentales.rut} - ${datosDentales.prevision}`;
-    document.querySelector("#informacionDental").appendChild(para);
+    const texto = `${datosDentales.hora} - ${datosDentales.especialista} - ${datosDentales.paciente} - ${datosDentales.rut} - ${datosDentales.prevision}`;
+    informacionDental += texto;
 });
 
 // ------------------------------------- Imprimir un listado total de todos los pacientes que se atendieron en el centro médico. 
