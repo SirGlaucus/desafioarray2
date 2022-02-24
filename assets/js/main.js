@@ -259,7 +259,7 @@ console.log(datosModificadosRadiologia);
 // ------------------------------------- separando por un guión cada dato desplegado y cada fila de información debe estar
 // ------------------------------------- separada por un párrafo.
 
-dental.forEach((datosDentales) => {
+dental.forEach(datosDentales => {
     const para = document.createElement("p");
     para.innerText = `${datosDentales.hora} - ${datosDentales.especialista} - ${datosDentales.paciente} - ${datosDentales.rut} - ${datosDentales.prevision}`;
     document.querySelector("#informacionDental").appendChild(para);
@@ -293,7 +293,7 @@ allPacientes.forEach((nombresPacientes) => {
 
 const informacionISAPREDental = document.querySelector("#informacionISAPREDental");
 
-dental.forEach((datosDentales) => {
+dental.forEach(datosDentales => {
     if (datosDentales.prevision === "ISAPRE")
     {
         /*
@@ -308,7 +308,7 @@ dental.forEach((datosDentales) => {
 // ------------------------------------- Filtrar aquellos pacientes que indican ser de FONASA en la lista de consultas médicas de Traumatología.
 
 const informacionFONASATraumatologia = document.querySelector("#informacionFONASATraumatologia");
-listaFinalTraumatologia.forEach((datosTraumatologia) => {
+listaFinalTraumatologia.forEach(datosTraumatologia => {
     if (datosTraumatologia.prevision === "FONASA")
     {
         const texto = `<p>${datosTraumatologia.paciente} - ${datosTraumatologia.prevision} </p>`; // Asignamos su valor interno
